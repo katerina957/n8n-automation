@@ -4,7 +4,6 @@ services:
     env: docker
     dockerfilePath: ./Dockerfile
     plan: free
-    dockerCommand: node /data/.n8n/node_modules/n8n/bin/n8n
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
