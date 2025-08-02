@@ -5,4 +5,7 @@ RUN apk add --no-cache tzdata
 USER node
 
 EXPOSE 5678
-CMD ["n8n", "start"]
+
+# Установим рабочую директорию и запустим n8n напрямую
+WORKDIR /data
+CMD ["node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
